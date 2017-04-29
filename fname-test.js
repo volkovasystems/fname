@@ -1,5 +1,8 @@
 
+const assert = require( "assert" );
 const fname = require( "./fname.js" );
 
-console.log( "named: ", fname( function hello( ){ } ) );
-console.log( "anonymous: ", fname( function( ){ } ) );
+assert.equal( fname( function test( ){ } ), "test", "should return function name 'test'" );
+assert.equal( fname( function( ){ } ), "", "should return empty function name" );
+
+console.log( "ok" );

@@ -1,11 +1,9 @@
 yarn add \
 babel-runtime \
 falzy \
-kein \
+mtch \
 protype \
-stringe \
 truly \
-wichevr \
 --save && \
 yarn add \
 babel-cli \
@@ -17,10 +15,8 @@ webpack \
 --dev && \
 bower install \
 falzy \
-kein \
+mtch \
 protype \
-stringe \
 truly \
-wichevr \
 --save \
 --force-latest

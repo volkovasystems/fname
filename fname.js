@@ -48,21 +48,17 @@
 	@include:
 		{
 			"falzy": "falzy",
-			"kein": "kein",
+			"mtch": "mtch",
 			"protype": "protype",
-			"stringe": "stringe",
-			"truly": "truly",
-			"wichevr": "wichevr"
+			"truly": "truly"
 		}
 	@end-include
 */
 
 const falzy = require( "falzy" );
-const kein = require( "kein" );
+const mtch = require( "mtch" );
 const protype = require( "protype" );
-const stringe = require( "stringe" );
 const truly = require( "truly" );
-const wichevr = require( "wichevr" );
 
 const FUNCTION_NAME_PATTERN = /^function\s*([a-zA-Z_][a-zA-Z0-9_]*)?\s*\(.*?\)\s*\{.*?\}$/m;
 
@@ -79,7 +75,7 @@ const fname = function fname( procedure ){
 		throw new Error( "invalid procedure" );
 	}
 
-	if( kein( "name", procedure ) && truly( procedure.name ) && protype( procedure.name, STRING ) ){
+	if( truly( procedure.name ) && protype( procedure.name, STRING ) ){
 		return procedure.name;
 	}
 
@@ -88,7 +84,7 @@ const fname = function fname( procedure ){
 			This is done as last resort to extracting function name.
 		@end-note
 	*/
-	return wichevr( stringe( procedure ).match( FUNCTION_NAME_PATTERN )[ 1 ], "" );
+	return mtch( procedure, FUNCTION_NAME_PATTERN, 1 );
 };
 
 module.exports = fname;
