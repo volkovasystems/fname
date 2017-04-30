@@ -61,6 +61,7 @@ var protype = require("protype");
 var truly = require("truly");
 
 var FUNCTION_NAME_PATTERN = /^function\s*([a-zA-Z_][a-zA-Z0-9_]*)?\s*\(.*?\)\s*\{.*?\}$/m;
+var NAME_PATTERN = /^[a-zA-Z_][a-zA-Z0-9_]*$/;
 
 var fname = function fname(procedure) {
 	/*;
@@ -79,7 +80,12 @@ var fname = function fname(procedure) {
 	}
 
 	if (protype(procedure, STRING)) {
-		return procedure;
+		if (NAME_PATTERN.test(procedure)) {
+			return procedure;
+
+		} else {
+			return "";
+		}
 	}
 
 	if (truly(procedure.name) && protype(procedure.name, STRING)) {
