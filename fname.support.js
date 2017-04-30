@@ -66,13 +66,20 @@ var fname = function fname(procedure) {
 	/*;
                                        	@meta-configuration:
                                        		{
-                                       			"procedure:required": "function"
+                                       			"procedure:required": [
+                                       				"function",
+                                       				"string"
+                                       			]
                                        		}
                                        	@end-meta-configuration
                                        */
 
-	if (falzy(procedure) || !protype(procedure, FUNCTION)) {
+	if (falzy(procedure) || !protype(procedure, FUNCTION + STRING)) {
 		throw new Error("invalid procedure");
+	}
+
+	if (protype(procedure, STRING)) {
+		return procedure;
 	}
 
 	if (truly(procedure.name) && protype(procedure.name, STRING)) {
