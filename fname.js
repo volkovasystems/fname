@@ -49,16 +49,16 @@
 		{
 			"falzy": "falzy",
 			"mtch": "mtch",
-			"protype": "protype",
-			"truly": "truly"
+			"nmde": "nmde",
+			"protype": "protype"
 		}
 	@end-include
 */
 
 const falzy = require( "falzy" );
 const mtch = require( "mtch" );
+const nmde = require( "nmde" );
 const protype = require( "protype" );
-const truly = require( "truly" );
 
 const EMPTY_NAME = "";
 const FUNCTION_NAME_PATTERN = /^function\s*([a-zA-Z_][a-zA-Z0-9_]*)?\s*\(.*?\)\s*\{.*?\}$/m;
@@ -89,16 +89,13 @@ const fname = function fname( procedure ){
 		}
 	}
 
-	if( truly( procedure.name ) && protype( procedure.name, STRING ) ){
-		return procedure.name;
-	}
-
 	/*;
 		@note:
-			This is done as last resort to extracting function name.
+			Matching procedure to a function name pattern
+				is done as last resort to extracting function name.
 		@end-note
 	*/
-	return mtch( procedure, FUNCTION_NAME_PATTERN, 1 );
+	return nmde( procedure ) || mtch( procedure, FUNCTION_NAME_PATTERN, 1 );
 };
 
 module.exports = fname;

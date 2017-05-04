@@ -1675,6 +1675,15 @@ nan@^2.3.0:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.6.2.tgz#e4ff34e6c95fdfb5aecc08de6596f43605a7db45"
 
+nmde@^0.0.0:
+  version "0.0.0"
+  resolved "https://registry.yarnpkg.com/nmde/-/nmde-0.0.0.tgz#173eb8d5b5dad6b7c403fcfd92f04616509c3326"
+  dependencies:
+    babel-runtime "^6.23.0"
+    falzy "^0.19.0"
+    protype "^0.21.0"
+    truly "^0.18.0"
+
 node-libs-browser@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/node-libs-browser/-/node-libs-browser-2.0.0.tgz#a3a59ec97024985b46e958379646f96c4b616646"

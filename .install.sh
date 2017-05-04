@@ -2,8 +2,8 @@ yarn add \
 babel-runtime \
 falzy \
 mtch \
+nmde \
 protype \
-truly \
 --save && \
 yarn add \
 babel-cli \
@@ -16,7 +16,7 @@ webpack \
 bower install \
 falzy \
 mtch \
+nmde \
 protype \
-truly \
 --save \
 --force-latest
