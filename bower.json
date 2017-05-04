@@ -1,6 +1,6 @@
 {
   "name": "fname",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Extract function name.",
   "main": "fname.deploy.js",
   "support": "fname.support.js",

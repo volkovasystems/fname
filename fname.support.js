@@ -60,6 +60,7 @@ var mtch = require("mtch");
 var protype = require("protype");
 var truly = require("truly");
 
+var EMPTY_NAME = "";
 var FUNCTION_NAME_PATTERN = /^function\s*([a-zA-Z_][a-zA-Z0-9_]*)?\s*\(.*?\)\s*\{.*?\}$/m;
 var NAME_PATTERN = /^[a-zA-Z_][a-zA-Z0-9_]*$/;
 
@@ -76,7 +77,7 @@ var fname = function fname(procedure) {
                                        */
 
 	if (falzy(procedure) || !protype(procedure, FUNCTION + STRING)) {
-		throw new Error("invalid procedure");
+		return EMPTY_NAME;
 	}
 
 	if (protype(procedure, STRING)) {
@@ -84,7 +85,7 @@ var fname = function fname(procedure) {
 			return procedure;
 
 		} else {
-			return "";
+			return EMPTY_NAME;
 		}
 	}
 
