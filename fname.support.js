@@ -61,7 +61,7 @@ var nmde = require("nmde");
 var protype = require("protype");
 
 var EMPTY_NAME = "";
-var FUNCTION_NAME_PATTERN = /^function\s*([a-zA-Z_][a-zA-Z0-9_]*)?\s*\(.*?\)\s*\{.*?\}$/m;
+var FUNCTION_NAME_PATTERN = /^(?:function)?\s*([a-zA-Z_][a-zA-Z0-9_]*)?\s*\(.*?\)\s*\{\s*.*?\s*\}$/m;
 var NAME_PATTERN = /^[a-zA-Z_][a-zA-Z0-9_]*$/;
 
 var fname = function fname(procedure) {

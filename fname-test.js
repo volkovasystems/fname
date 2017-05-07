@@ -16,4 +16,6 @@ assert.equal( fname( false ), "", "should return empty string" );
 
 assert.equal( fname( NaN ), "", "should return empty string" );
 
+assert.equal( fname( ( { test( ){ } } ).test ), "test", "should return function name 'test'" )
+
 console.log( "ok" );
