@@ -35,6 +35,9 @@
 			"module": "fname",
 			"author": "Richeve S. Bebedor",
 			"eMail": "richeve.bebedor@gmail.com",
+			"contributors": [
+				"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+			],
 			"repository": "https://github.com/volkovasystems/fname.git",
 			"test": "fname-test.js",
 			"global": true
