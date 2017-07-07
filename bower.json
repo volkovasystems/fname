@@ -1,12 +1,13 @@
 {
   "name": "fname",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "Extract function name.",
   "main": "fname.deploy.js",
   "support": "fname.support.js",
   "authors": [
     "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>"
+    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+    "Vinse Vinalon <vinsevinalon@gmail.com>"
   ],
   "license": "MIT",
   "keywords": [
@@ -25,8 +26,8 @@
   ],
   "dependencies": {
     "falzy": "^0.20.0",
-    "mtch": "^0.2.0",
-    "nmde": "^0.1.0",
+    "mtch": "^0.3.0",
+    "nmde": "^0.2.0",
     "protype": "^0.22.0"
   }
 }
