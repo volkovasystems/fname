@@ -1,8 +1,40 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./fname.deploy.js">
-		</script>
+		<title>fname unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./fname.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "fname unit test", function( assert ) {
+
+				assert.equal( fname( "test" ), "test", "should return string 'test'" );
+
+				assert.equal( fname( function test( ){ } ), "test", "should return function name 'test'" );
+
+				assert.equal( fname( ( { test( ){ } } ).test ), "test", "should return function name 'test'" )
+
+				assert.equal( fname( Error ), "Error", "should return 'Error'" );
+
+				assert.equal( fname( ), "", "should return empty string" );
+
+				assert.equal( fname( function( ){ } ), "", "should return empty string" );
+
+				assert.equal( fname( ( ) => { } ), "", "should return empty string" );
+
+				assert.equal( fname( ( entity ) => ( typeof entity == "string" ) ), "", "should return empty string" );
+
+			} );
+		</script>
+	</body>
 </html>
