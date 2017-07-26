@@ -3,7 +3,6 @@ babel-runtime \
 falzy \
 mtch \
 nmde \
-protype \
 --save && \
 yarn add \
 babel-cli \
@@ -17,6 +16,5 @@ bower install \
 falzy \
 mtch \
 nmde \
-protype \
 --save \
 --force-latest

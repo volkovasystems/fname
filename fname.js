@@ -43,7 +43,7 @@
 			"test": "fname-test.js",
 			"global": true
 		}
-	@end-module-configuration
+	@end-module-configuratio	n
 
 	@module-documentation:
 		Extract function name.
@@ -53,8 +53,7 @@
 		{
 			"falzy": "falzy",
 			"mtch": "mtch",
-			"nmde": "nmde",
-			"protype": "protype"
+			"nmde": "nmde"
 		}
 	@end-include
 */
@@ -62,7 +61,6 @@
 const falzy = require( "falzy" );
 const mtch = require( "mtch" );
 const nmde = require( "nmde" );
-const protype = require( "protype" );
 
 const EMPTY_NAME = "";
 const FUNCTION_NAME_PATTERN = /^(?:function)?\s*([a-zA-Z_][a-zA-Z0-9_]*)?\s*\(.*?\)\s*\{\s*.*?\s*\}$/m;
@@ -80,17 +78,17 @@ const fname = function fname( procedure ){
 		@end-meta-configuration
 	*/
 
-	if( falzy( procedure ) || !protype( procedure, FUNCTION + STRING ) ){
-		return EMPTY_NAME;
-	}
-
-	if( typeof procedure == STRING ){
+	if( typeof procedure == "string" ){
 		if( NAME_PATTERN.test( procedure ) ){
 			return procedure;
 
 		}else{
 			return EMPTY_NAME;
 		}
+	}
+
+	if( typeof procedure != "function" ){
+		return EMPTY_NAME;
 	}
 
 	/*;

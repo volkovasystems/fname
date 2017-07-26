@@ -43,7 +43,7 @@
               			"test": "fname-test.js",
               			"global": true
               		}
-              	@end-module-configuration
+              	@end-module-configuratio	n
               
               	@module-documentation:
               		Extract function name.
@@ -53,16 +53,14 @@
               		{
               			"falzy": "falzy",
               			"mtch": "mtch",
-              			"nmde": "nmde",
-              			"protype": "protype"
+              			"nmde": "nmde"
               		}
               	@end-include
-              */var _typeof2 = require("babel-runtime/helpers/typeof");var _typeof3 = _interopRequireDefault(_typeof2);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+              */
 
 var falzy = require("falzy");
 var mtch = require("mtch");
 var nmde = require("nmde");
-var protype = require("protype");
 
 var EMPTY_NAME = "";
 var FUNCTION_NAME_PATTERN = /^(?:function)?\s*([a-zA-Z_][a-zA-Z0-9_]*)?\s*\(.*?\)\s*\{\s*.*?\s*\}$/m;
@@ -80,17 +78,17 @@ var fname = function fname(procedure) {
                                        	@end-meta-configuration
                                        */
 
-	if (falzy(procedure) || !protype(procedure, FUNCTION + STRING)) {
-		return EMPTY_NAME;
-	}
-
-	if ((typeof procedure === "undefined" ? "undefined" : (0, _typeof3.default)(procedure)) == STRING) {
+	if (typeof procedure == "string") {
 		if (NAME_PATTERN.test(procedure)) {
 			return procedure;
 
 		} else {
 			return EMPTY_NAME;
 		}
+	}
+
+	if (typeof procedure != "function") {
+		return EMPTY_NAME;
 	}
 
 	/*;
