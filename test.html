@@ -1,40 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>fname unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:fname</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
-
-		<script type="application/javascript" src="./fname.deploy.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "fname unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				assert.equal( fname( "test" ), "test", "should return string 'test'" );
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-				assert.equal( fname( function test( ){ } ), "test", "should return function name 'test'" );
-
-				assert.equal( fname( ( { test( ){ } } ).test ), "test", "should return function name 'test'" )
-
-				assert.equal( fname( Error ), "Error", "should return 'Error'" );
-
-				assert.equal( fname( ), "", "should return empty string" );
-
-				assert.equal( fname( function( ){ } ), "", "should return empty string" );
-
-				assert.equal( fname( ( ) => { } ), "", "should return empty string" );
-
-				assert.equal( fname( ( entity ) => ( typeof entity == "string" ) ), "", "should return empty string" );
-
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>
