@@ -5,22 +5,22 @@
     "passes": 8,
     "pending": 0,
     "failures": 0,
-    "start": "2017-07-30T17:17:06.622Z",
-    "end": "2017-07-30T17:17:06.635Z",
-    "duration": 13
+    "start": "2017-08-20T02:13:54.989Z",
+    "end": "2017-08-20T02:13:54.998Z",
+    "duration": 9
   },
   "tests": [
     {
       "title": "should return string 'test'",
       "fullTitle": "fname \"fname( \"test\" )\" should return string 'test'",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "should return function name 'test'",
       "fullTitle": "fname \"fname( \"test\" )\" should return function name 'test'",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
@@ -48,7 +48,7 @@
     {
       "title": "should return empty string",
       "fullTitle": "fname \"fname( function( ){ } )\" should return empty string",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
@@ -73,14 +73,14 @@
     {
       "title": "should return string 'test'",
       "fullTitle": "fname \"fname( \"test\" )\" should return string 'test'",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "should return function name 'test'",
       "fullTitle": "fname \"fname( \"test\" )\" should return function name 'test'",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
@@ -108,7 +108,7 @@
     {
       "title": "should return empty string",
       "fullTitle": "fname \"fname( function( ){ } )\" should return empty string",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {}
     },
