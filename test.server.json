@@ -5,9 +5,9 @@
     "passes": 8,
     "pending": 0,
     "failures": 0,
-    "start": "2017-08-20T02:13:54.989Z",
-    "end": "2017-08-20T02:13:54.998Z",
-    "duration": 9
+    "start": "2017-08-21T05:09:48.199Z",
+    "end": "2017-08-21T05:09:48.213Z",
+    "duration": 14
   },
   "tests": [
     {
@@ -20,7 +20,7 @@
     {
       "title": "should return function name 'test'",
       "fullTitle": "fname \"fname( \"test\" )\" should return function name 'test'",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -48,7 +48,7 @@
     {
       "title": "should return empty string",
       "fullTitle": "fname \"fname( function( ){ } )\" should return empty string",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -80,7 +80,7 @@
     {
       "title": "should return function name 'test'",
       "fullTitle": "fname \"fname( \"test\" )\" should return function name 'test'",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -108,7 +108,7 @@
     {
       "title": "should return empty string",
       "fullTitle": "fname \"fname( function( ){ } )\" should return empty string",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
