@@ -5,15 +5,15 @@
 		"passes": 8,
 		"pending": 0,
 		"failures": 0,
-		"start": "2017-08-22T05:11:11.755Z",
-		"end": "2017-08-22T05:11:11.761Z",
+		"start": "2017-08-22T05:17:37.574Z",
+		"end": "2017-08-22T05:17:37.580Z",
 		"duration": 6
 	},
 	"tests": [
 		{
 			"title": "should be equal to 'test'",
 			"fullTitle": "fname `fname( 'test' )` should be equal to 'test'",
-			"duration": 1,
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		},
@@ -34,7 +34,7 @@
 		{
 			"title": "should be equal to 'Error'",
 			"fullTitle": "fname `fname( Error )` should be equal to 'Error'",
-			"duration": 0,
+			"duration": 1,
 			"currentRetry": 0,
 			"err": {}
 		},
@@ -55,7 +55,7 @@
 		{
 			"title": "should be equal to empty string",
 			"fullTitle": "fname `fname( ( ) => { } )` should be equal to empty string",
-			"duration": 1,
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		},
@@ -73,7 +73,7 @@
 		{
 			"title": "should be equal to 'test'",
 			"fullTitle": "fname `fname( 'test' )` should be equal to 'test'",
-			"duration": 1,
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		},
@@ -94,7 +94,7 @@
 		{
 			"title": "should be equal to 'Error'",
 			"fullTitle": "fname `fname( Error )` should be equal to 'Error'",
-			"duration": 0,
+			"duration": 1,
 			"currentRetry": 0,
 			"err": {}
 		},
@@ -115,7 +115,7 @@
 		{
 			"title": "should be equal to empty string",
 			"fullTitle": "fname `fname( ( ) => { } )` should be equal to empty string",
-			"duration": 1,
+			"duration": 0,
 			"currentRetry": 0,
 			"err": {}
 		},
