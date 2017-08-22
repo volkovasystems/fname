@@ -326,7 +326,7 @@ describe( "fname", ( ) => {
 
 	describe( "`fname( ( ) => { } )`", ( ) => {
 		it( "should be equal to empty string"  , ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
@@ -334,7 +334,7 @@ describe( "fname", ( ) => {
 				}
 
 			).value;
-
+			//: @end-ignore
 			assert.equal( result, "" );
 
 		} );
@@ -342,7 +342,7 @@ describe( "fname", ( ) => {
 
 	describe( "`fname( ( entity ) => ( typeof entity == 'string' ) )`", ( ) => {
 		it( "should be equal to empty string", ( ) => {
-
+			//: @ignore:
 			let result = browser.url( bridgeURL ).execute(
 
 				function( ){
@@ -350,7 +350,7 @@ describe( "fname", ( ) => {
 				}
 
 			).value;
-
+			//: @end-ignore
 			assert.equal( result, "" );
 
 		} );
