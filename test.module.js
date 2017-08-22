@@ -75,23 +75,23 @@ const path = require( "path" );
 describe( "fname", ( ) => {
 
 	describe( "`fname( 'test' )`", ( ) => {
-		it( "should be equal to string 'test'", ( ) => {
+		it( "should be equal to 'test'", ( ) => {
 
 			assert.equal( fname( "test" ), "test" );
 
 		} );
 	} );
 
-	describe( "`fname( 'test' )`", ( ) => {
-		it( "should be equal to function name 'test'", ( ) => {
+	describe( "`fname( function test( ){ } )`", ( ) => {
+		it( "should be equal to 'test'", ( ) => {
 
-			assert.equal( fname( function test( ){ } ), "test");
+			assert.equal( fname( function test( ){ } ), "test" );
 
 		} );
 	} );
 
 	describe( "`fname( ( { test( ){ } } ).test )`", ( ) => {
-		it( "should be equal to function name 'test'", ( ) => {
+		it( "should be equal to 'test'", ( ) => {
 
 			assert.equal( fname( ( { test( ){ } } ).test ), "test" );
 
@@ -99,7 +99,7 @@ describe( "fname", ( ) => {
 	} );
 
 
-	describe( "`assert.equal( fname( Error )`", ( ) => {
+	describe( "`fname( Error )`", ( ) => {
 		it( "should be equal to 'Error'" , ( ) => {
 
 			assert.equal( fname( Error ), "Error" );
@@ -135,25 +135,227 @@ describe( "fname", ( ) => {
 	describe( "`fname( ( entity ) => ( typeof entity == 'string' ) )`", ( ) => {
 		it( "should be equal to empty string", ( ) => {
 
-			assert.equal( fname( ( entity ) => ( typeof entity == "string" ) ), "");
+			assert.equal( fname( ( entity ) => ( typeof entity == "string" ) ), "" );
 
 		} );
 	} );
 
 } );
 
-
 //: @end-server
 
 
 //: @client:
 
+describe( "fname", ( ) => {
+
+	describe( "`fname( 'test' )`", ( ) => {
+		it( "should be equal to 'test'", ( ) => {
+
+			assert.equal( fname( "test" ), "test" );
+
+		} );
+	} );
+
+	describe( "`fname( function test( ){ } )`", ( ) => {
+		it( "should be equal to 'test'", ( ) => {
+
+			assert.equal( fname( function test( ){ } ), "test" );
+
+		} );
+	} );
+
+	describe( "`fname( ( { test( ){ } } ).test )`", ( ) => {
+		it( "should be equal to 'test'", ( ) => {
+
+			assert.equal( fname( ( { test( ){ } } ).test ), "test" );
+
+		} );
+	} );
+
+
+	describe( "`fname( Error )`", ( ) => {
+		it( "should be equal to 'Error'" , ( ) => {
+
+			assert.equal( fname( Error ), "Error" );
+
+		} );
+	} );
+
+	describe( "`fname( )`", ( ) => {
+		it( "should be equal to empty string" , ( ) => {
+
+			assert.equal( fname( ), "" );
+
+		} );
+	} );
+
+
+	describe( "`fname( function( ){ } )`", ( ) => {
+		it( "should be equal to empty string" , ( ) => {
+
+			assert.equal( fname( function( ){ } ), "");
+
+		} );
+	} );
+
+	describe( "`fname( ( ) => { } )`", ( ) => {
+		it( "should be equal to empty string"  , ( ) => {
+
+			assert.equal( fname( ( ) => { } ), "" );
+
+		} );
+	} );
+
+	describe( "`fname( ( entity ) => ( typeof entity == 'string' ) )`", ( ) => {
+		it( "should be equal to empty string", ( ) => {
+
+			assert.equal( fname( ( entity ) => ( typeof entity == "string" ) ), "" );
+
+		} );
+	} );
+
+} );
 
 //: @end-client
 
 
 //: @bridge:
 
+describe( "fname", ( ) => {
 
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
+
+	describe( "`fname( 'test' )`", ( ) => {
+		it( "should be equal to 'test'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return fname( "test" );
+				}
+
+			).value;
+
+			assert.equal( result, "test" );
+
+		} );
+	} );
+
+	describe( "`fname( function test( ){ } )`", ( ) => {
+		it( "should be equal to 'test'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return fname( function test( ){ } );
+				}
+
+			).value;
+
+			assert.equal( result, "test" );
+
+		} );
+	} );
+
+	describe( "`fname( ( { test( ){ } } ).test )`", ( ) => {
+		it( "should be equal to 'test'", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return fname( ( { test( ){ } } ).test );
+				}
+
+			).value;
+
+			assert.equal( result, "test" );
+
+		} );
+	} );
+
+
+	describe( "`fname( Error )`", ( ) => {
+		it( "should be equal to 'Error'" , ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return fname( Error );
+				}
+
+			).value;
+
+			assert.equal( result, "Error" );
+
+		} );
+	} );
+
+	describe( "`fname( )`", ( ) => {
+		it( "should be equal to empty string" , ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return fname( );
+				}
+
+			).value;
+
+			assert.equal( result, "" );
+
+		} );
+	} );
+
+
+	describe( "`fname( function( ){ } )`", ( ) => {
+		it( "should be equal to empty string" , ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return fname( function( ){ } );
+				}
+
+			).value;
+
+			assert.equal( result, "" );
+
+		} );
+	} );
+
+	describe( "`fname( ( ) => { } )`", ( ) => {
+		it( "should be equal to empty string"  , ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return fname( ( ) => { } );
+				}
+
+			).value;
+
+			assert.equal( result, "" );
+
+		} );
+	} );
+
+	describe( "`fname( ( entity ) => ( typeof entity == 'string' ) )`", ( ) => {
+		it( "should be equal to empty string", ( ) => {
+
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					return fname( ( entity ) => ( typeof entity == "string" ) );
+				}
+
+			).value;
+
+			assert.equal( result, "" );
+
+		} );
+	} );
+
+} );
 
 //: @end-bridge
