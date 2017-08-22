@@ -74,7 +74,7 @@ const path = require( "path" );
 
 describe( "fname", ( ) => {
 
-	describe( `"fname( "test" )"`, ( ) => {
+	describe( "`fname( 'test' )`", ( ) => {
 		it( "should be equal to string 'test'", ( ) => {
 
 			assert.equal( fname( "test" ), "test" );
@@ -82,16 +82,16 @@ describe( "fname", ( ) => {
 		} );
 	} );
 
-	describe( `"fname( "test" )"`, ( ) => {
-	it( "should be equal to function name 'test'", ( ) => {
+	describe( "`fname( 'test' )`", ( ) => {
+		it( "should be equal to function name 'test'", ( ) => {
 
 			assert.equal( fname( function test( ){ } ), "test");
 
 		} );
 	} );
 
-	describe( `"fname( ( { test( ){ } } ).test )"`, ( ) => {
-	it( "should be equal to function name 'test'", ( ) => {
+	describe( "`fname( ( { test( ){ } } ).test )`", ( ) => {
+		it( "should be equal to function name 'test'", ( ) => {
 
 			assert.equal( fname( ( { test( ){ } } ).test ), "test" );
 
@@ -99,16 +99,16 @@ describe( "fname", ( ) => {
 	} );
 
 
-	describe( `"assert.equal( fname( Error )"`, ( ) => {
-	it( "should be equal to 'Error'" , ( ) => {
+	describe( "`assert.equal( fname( Error )`", ( ) => {
+		it( "should be equal to 'Error'" , ( ) => {
 
 			assert.equal( fname( Error ), "Error" );
 
 		} );
 	} );
 
-	describe( `"fname( )"`, ( ) => {
-	it( "should be equal to empty string" , ( ) => {
+	describe( "`fname( )`", ( ) => {
+		it( "should be equal to empty string" , ( ) => {
 
 			assert.equal( fname( ), "" );
 
@@ -116,24 +116,24 @@ describe( "fname", ( ) => {
 	} );
 
 
-	describe( `"fname( function( ){ } )"`, ( ) => {
-	it( "should be equal to empty string" , ( ) => {
+	describe( "`fname( function( ){ } )`", ( ) => {
+		it( "should be equal to empty string" , ( ) => {
 
 			assert.equal( fname( function( ){ } ), "");
 
 		} );
 	} );
 
-	describe( `"fname( ( ) => { } )"`, ( ) => {
-	it( "should be equal to empty string"  , ( ) => {
+	describe( "`fname( ( ) => { } )`", ( ) => {
+		it( "should be equal to empty string"  , ( ) => {
 
 			assert.equal( fname( ( ) => { } ), "" );
 
 		} );
 	} );
 
-	describe( `"fname( ( entity ) => ( typeof entity == "string" ) )"`, ( ) => {
-	it( "should be equal to empty string", ( ) => {
+	describe( "`fname( ( entity ) => ( typeof entity == 'string' ) )`", ( ) => {
+		it( "should be equal to empty string", ( ) => {
 
 			assert.equal( fname( ( entity ) => ( typeof entity == "string" ) ), "");
 
@@ -148,75 +148,6 @@ describe( "fname", ( ) => {
 
 //: @client:
 
-describe( "fname", ( ) => {
-
-	describe( `"fname( "test" )"`, ( ) => {
-		it( "should be equal to string 'test'", ( ) => {
-
-			assert.equal( fname( "test" ), "test" );
-
-		} );
-	} );
-
-	describe( `"fname( "test" )"`, ( ) => {
-	it( "should be equal to function name 'test'", ( ) => {
-
-			assert.equal( fname( function test( ){ } ), "test");
-
-		} );
-	} );
-
-	describe( `"fname( ( { test( ){ } } ).test )"`, ( ) => {
-	it( "should be equal to function name 'test'", ( ) => {
-
-			assert.equal( fname( ( { test( ){ } } ).test ), "test" );
-
-		} );
-	} );
-
-
-	describe( `"assert.equal( fname( Error )"`, ( ) => {
-	it( "should be equal to 'Error'" , ( ) => {
-
-			assert.equal( fname( Error ), "Error" );
-
-		} );
-	} );
-
-	describe( `"fname( )"`, ( ) => {
-	it( "should be equal to empty string" , ( ) => {
-
-			assert.equal( fname( ), "" );
-
-		} );
-	} );
-
-
-	describe( `"fname( function( ){ } )"`, ( ) => {
-	it( "should be equal to empty string" , ( ) => {
-
-			assert.equal( fname( function( ){ } ), "");
-
-		} );
-	} );
-
-	describe( `"fname( ( ) => { } )"`, ( ) => {
-	it( "should be equal to empty string"  , ( ) => {
-
-			assert.equal( fname( ( ) => { } ), "" );
-
-		} );
-	} );
-
-	describe( `"fname( ( entity ) => ( typeof entity == "string" ) )"`, ( ) => {
-	it( "should be equal to empty string", ( ) => {
-
-			assert.equal( fname( ( entity ) => ( typeof entity == "string" ) ), "");
-
-		} );
-	} );
-
-} );
 
 //: @end-client
 
