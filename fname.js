@@ -62,6 +62,7 @@ const falzy = require( "falzy" );
 const mtch = require( "mtch" );
 const nmde = require( "nmde" );
 
+const ANONYMOUS = "anonymous";
 const EMPTY_NAME = "";
 const FUNCTION_NAME_PATTERN = /^(?:function)?\s*([a-zA-Z_][a-zA-Z0-9_]*)?\s*\(.*?\)\s*\{\s*.*?\s*\}$/m;
 const NAME_PATTERN = /^[a-zA-Z_][a-zA-Z0-9_]*$/;
@@ -97,7 +98,13 @@ const fname = function fname( procedure ){
 				is done as last resort to extracting function name.
 		@end-note
 	*/
-	return nmde( procedure ) || mtch( procedure, FUNCTION_NAME_PATTERN, 1 );
+	let name = nmde( procedure ) || mtch( procedure, FUNCTION_NAME_PATTERN, 1 );
+
+	if( name === ANONYMOUS ){
+		return EMPTY_NAME;
+	}
+
+	return name;
 };
 
 module.exports = fname;
