@@ -1,130 +1,130 @@
 {
-  "stats": {
-    "suites": 9,
-    "tests": 8,
-    "passes": 8,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-21T05:09:48.199Z",
-    "end": "2017-08-21T05:09:48.213Z",
-    "duration": 14
-  },
-  "tests": [
-    {
-      "title": "should return string 'test'",
-      "fullTitle": "fname \"fname( \"test\" )\" should return string 'test'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return function name 'test'",
-      "fullTitle": "fname \"fname( \"test\" )\" should return function name 'test'",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return function name 'test'",
-      "fullTitle": "fname \"fname( ( { test( ){ } } ).test )\" should return function name 'test'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return 'Error'",
-      "fullTitle": "fname \"assert.equal( fname( Error )\" should return 'Error'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return empty string",
-      "fullTitle": "fname \"fname( )\" should return empty string",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return empty string",
-      "fullTitle": "fname \"fname( function( ){ } )\" should return empty string",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return empty string",
-      "fullTitle": "fname \"fname( ( ) => { } )\" should return empty string",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return empty string",
-      "fullTitle": "fname \"fname( ( entity ) => ( typeof entity == \"string\" ) )\" should return empty string",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ],
-  "pending": [],
-  "failures": [],
-  "passes": [
-    {
-      "title": "should return string 'test'",
-      "fullTitle": "fname \"fname( \"test\" )\" should return string 'test'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return function name 'test'",
-      "fullTitle": "fname \"fname( \"test\" )\" should return function name 'test'",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return function name 'test'",
-      "fullTitle": "fname \"fname( ( { test( ){ } } ).test )\" should return function name 'test'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return 'Error'",
-      "fullTitle": "fname \"assert.equal( fname( Error )\" should return 'Error'",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return empty string",
-      "fullTitle": "fname \"fname( )\" should return empty string",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return empty string",
-      "fullTitle": "fname \"fname( function( ){ } )\" should return empty string",
-      "duration": 1,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return empty string",
-      "fullTitle": "fname \"fname( ( ) => { } )\" should return empty string",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    },
-    {
-      "title": "should return empty string",
-      "fullTitle": "fname \"fname( ( entity ) => ( typeof entity == \"string\" ) )\" should return empty string",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {}
-    }
-  ]
+	"stats": {
+		"suites": 9,
+		"tests": 8,
+		"passes": 8,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-08-22T05:11:11.755Z",
+		"end": "2017-08-22T05:11:11.761Z",
+		"duration": 6
+	},
+	"tests": [
+		{
+			"title": "should be equal to 'test'",
+			"fullTitle": "fname `fname( 'test' )` should be equal to 'test'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'test'",
+			"fullTitle": "fname `fname( function test( ){ } )` should be equal to 'test'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'test'",
+			"fullTitle": "fname `fname( ( { test( ){ } } ).test )` should be equal to 'test'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'Error'",
+			"fullTitle": "fname `fname( Error )` should be equal to 'Error'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to empty string",
+			"fullTitle": "fname `fname( )` should be equal to empty string",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to empty string",
+			"fullTitle": "fname `fname( function( ){ } )` should be equal to empty string",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to empty string",
+			"fullTitle": "fname `fname( ( ) => { } )` should be equal to empty string",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to empty string",
+			"fullTitle": "fname `fname( ( entity ) => ( typeof entity == 'string' ) )` should be equal to empty string",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to 'test'",
+			"fullTitle": "fname `fname( 'test' )` should be equal to 'test'",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'test'",
+			"fullTitle": "fname `fname( function test( ){ } )` should be equal to 'test'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'test'",
+			"fullTitle": "fname `fname( ( { test( ){ } } ).test )` should be equal to 'test'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to 'Error'",
+			"fullTitle": "fname `fname( Error )` should be equal to 'Error'",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to empty string",
+			"fullTitle": "fname `fname( )` should be equal to empty string",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to empty string",
+			"fullTitle": "fname `fname( function( ){ } )` should be equal to empty string",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to empty string",
+			"fullTitle": "fname `fname( ( ) => { } )` should be equal to empty string",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to empty string",
+			"fullTitle": "fname `fname( ( entity ) => ( typeof entity == 'string' ) )` should be equal to empty string",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }
